@@ -17,7 +17,7 @@ nav a:hover { text-decoration: underline; }
 .brand span { color: #bc492c; margin-inline: 2px; }
 .hero, .section { display: grid; grid-template-columns: 1.4fr 1fr; align-items: center; gap: 8%; }
 .hero { padding-block: clamp(42px, 7vw, 110px); background: #163b34; color: #fffef3; }
-.label, li b { font: 650 .82rem/1.5 Consolas, monospace; letter-spacing: .09em; text-transform: uppercase; }
+.label { font: 650 .82rem/1.5 Consolas, monospace; letter-spacing: .09em; text-transform: uppercase; }
 .hero .label, em { color: #d7ef86; }
 h1, h2, .fleet strong { margin: 0; letter-spacing: -.06em; line-height: .98; }
 h1 { font-size: clamp(52px, 7.2vw, 112px); }
@@ -31,13 +31,34 @@ p { line-height: 1.6; max-width: 52ch; }
 .fleet small { font-size: .5em; }
 .section { align-items: start; padding-block: 52px; border-bottom: 1px solid var(--line); }
 h2 { font-size: clamp(34px, 4.2vw, 64px); }
-ul { margin: 0; padding: 0; list-style: none; }
-li { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 1.25rem; }
-li b { color: #526c61; }
 summary { font-weight: 700; cursor: pointer; padding-block: 12px; }
 footer { padding-block: 24px; gap: 10px; flex-wrap: wrap; }
 @media (max-width: 700px) {
   .hero, .section { grid-template-columns: 1fr; gap: 32px; }
   aside { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .section { padding-block: 36px; }
+  header { flex-wrap: wrap; gap: 0 12px; padding-block: 8px; }
+  nav { flex-wrap: wrap; gap: 0 8px; }
+  nav a, .brand { display: inline-flex; align-items: center; min-height: 44px; }
+  nav a { padding-inline: 6px; }
+  h1 { font-size: clamp(2.6rem, 11vw, 4rem); }
+  .fleet strong { font-size: clamp(2.25rem, 9vw, 3rem); }
+  .section { scroll-margin-top: 12px; }
+  summary { min-height: 48px; }
 }
+
+.contact { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; margin-block: 16px; }
+.contact a, .routes { display: inline-flex; align-items: center; min-height: 44px; }
+.contact .button { margin: 0; }
+
+.road-photo { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+aside .road-photo { grid-column: 1 / -1; margin-bottom: 8px; }
+.jobs { background: #e6edda; align-items: center; }
+.jobs .button { background: #163b34; color: #fffef3; }
+.jobs h2 { margin-bottom: 16px; }
+
+.coverage { display: block; width: 100%; height: auto; margin-top: 24px; }
+.map-labels text { fill: #fffef3; font: 650 20px "Segoe UI", sans-serif; paint-order: stroke; stroke: #163b34; stroke-width: 4px; stroke-linejoin: round; }
+#kierunki { align-items: center; }
+.location iframe { display: block; width: 100%; height: clamp(260px, 34vw, 400px); border: 1px solid var(--line); }
+.location .button { min-height: 44px; }

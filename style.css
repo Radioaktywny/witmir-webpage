@@ -1,0 +1,43 @@
+:root {
+  font-family: Inter, "Segoe UI", sans-serif;
+  color: #162e2a;
+  background: #f6f4eb;
+  --line: #c3cac0;
+}
+* { box-sizing: border-box; }
+body { margin: 0 auto; max-width: 1520px; }
+header, footer, .hero, .section { padding-inline: clamp(20px, 6vw, 100px); }
+header, nav, footer { display: flex; align-items: center; justify-content: space-between; }
+header { padding-block: 22px; border-bottom: 1px solid var(--line); }
+nav { gap: clamp(12px, 3vw, 48px); }
+a { color: inherit; text-underline-offset: 5px; }
+nav a, .brand, .button { text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+.brand { font-size: clamp(24px, 3vw, 40px); font-weight: 900; font-style: italic; letter-spacing: -.08em; }
+.brand span { color: #bc492c; margin-inline: 2px; }
+.hero, .section { display: grid; grid-template-columns: 1.4fr 1fr; align-items: center; gap: 8%; }
+.hero { padding-block: clamp(42px, 7vw, 110px); background: #163b34; color: #fffef3; }
+.label, li b { font: 650 .82rem/1.5 Consolas, monospace; letter-spacing: .09em; text-transform: uppercase; }
+.hero .label, em { color: #d7ef86; }
+h1, h2, .fleet strong { margin: 0; letter-spacing: -.06em; line-height: .98; }
+h1 { font-size: clamp(52px, 7.2vw, 112px); }
+em { font-style: normal; }
+p { line-height: 1.6; max-width: 52ch; }
+.button { display: inline-flex; gap: 24px; padding: 14px 20px; margin-top: 12px; background: #d7ef86; color: #163b34; font-weight: 650; }
+.button:hover { background: #edffad; }
+.fleet { padding: 22px 0; border-top: 1px solid #8aada1; }
+.fleet strong, .fleet span { display: block; }
+.fleet strong { font-size: clamp(48px, 6vw, 92px); margin-bottom: 9px; }
+.fleet small { font-size: .5em; }
+.section { align-items: start; padding-block: 52px; border-bottom: 1px solid var(--line); }
+h2 { font-size: clamp(34px, 4.2vw, 64px); }
+ul { margin: 0; padding: 0; list-style: none; }
+li { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 1.25rem; }
+li b { color: #526c61; }
+summary { font-weight: 700; cursor: pointer; padding-block: 12px; }
+footer { padding-block: 24px; gap: 10px; flex-wrap: wrap; }
+@media (max-width: 700px) {
+  .hero, .section { grid-template-columns: 1fr; gap: 32px; }
+  aside { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .section { padding-block: 36px; }
+}
